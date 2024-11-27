@@ -14,3 +14,6 @@ def power(a, b):
 
 def log(x):
     return math.log(x)
+
+def sqrt(x):
+    return math.sqrt(x)
