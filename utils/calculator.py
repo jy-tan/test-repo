@@ -14,3 +14,6 @@ def log(x):
 
 def sqrt(x):
     return math.sqrt(x)
+
+def sin(x):
+    return math.sin(x)
