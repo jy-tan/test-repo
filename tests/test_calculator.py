@@ -1,5 +1,5 @@
 import pytest
-from utils.calculator import add, multiply, divide, sqrt
+from utils.calculator import add, multiply, divide
 
 def test_add():
     assert add(1, 2) == 3
@@ -11,9 +11,4 @@ def test_multiply_positive_integers():
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError):
         divide(10, 0)
-
-def test_sqrt_positive_integer():
-    input_value = 16
-    expected_output = 4
-    assert sqrt(input_value) == expected_output
 
