@@ -12,3 +12,8 @@ def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError):
         divide(10, 0)
 
+def test_sqrt_positive_number():
+    assert sqrt(9) == 3.0
+
+def test_sqrt_zero():
+    assert sqrt(0) == 0.0
