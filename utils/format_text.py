@@ -9,6 +9,3 @@ def remove_special_characters(text):
 
 def format_currency(number):
     return f"${number:,.2f}"
-
-def format_percentage(number):
-    return f"{number:.2f}%"
