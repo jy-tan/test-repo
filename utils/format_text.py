@@ -9,3 +9,12 @@ def remove_special_characters(text):
 
 def format_currency(number):
     return f"${number:,.2f}"
+
+def format_percentage(number):
+    return f"{number:.2f}%"
+
+def format_date(date):
+    return date.strftime("%Y-%m-%d")
+
+def format_time(time):
+    return time.strftime("%H:%M:%S")
