@@ -20,3 +20,6 @@ def log(a):
 
 def tan(a):
     return math.tan(a)
+
+def tanh(a):
+    return math.tanh(a)
