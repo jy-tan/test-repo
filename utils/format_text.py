@@ -18,3 +18,11 @@ def format_date(date):
 
 def format_time(time):
     return time.strftime("%H:%M:%S")
+
+def count_words(text: str) -> int:
+    """Counts the number of words in a string."""
+    return len(text.split())
+
+def capitalize_words(text: str) -> str:
+    """Capitalizes the first letter of each word in a string."""
+    return ' '.join(word.capitalize() for word in text.split())
