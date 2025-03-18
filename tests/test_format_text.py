@@ -1,4 +1,4 @@
-from utils.format_text import format_currency, make_camelcase
+from utils.format_text import count_words, format_currency, make_camelcase
 
 def test_format_currency():
     # Test formatting an integer
@@ -34,3 +34,7 @@ def test_make_camelcase():
 
     # Test input with leading and trailing spaces
     assert make_camelcase("   trim spaces   ") == "trimSpaces"
+
+def test_count_words():
+    # Test counting words in a simple sentence with spaces between words
+    assert count_words("This is a simple sentence") == 5
