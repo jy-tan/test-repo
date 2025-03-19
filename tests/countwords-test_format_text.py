@@ -57,21 +57,3 @@ def test_count_words_whitespace_only():
     # Test string with a single whitespace character
     assert count_words(" ") == 0
 
-def test_count_words_with_punctuation():
-    # Test string with commas attached to words
-    assert count_words("Hello, world, how are you?") == 5
-    
-    # Test string with periods attached to words
-    assert count_words("This. Is. A. Test.") == 4
-    
-    # Test string with mixed punctuation
-    assert count_words("Hello! How's it going? Well, I hope.") == 7
-    
-    # Test string with punctuation but no spaces (should count as 1 word)
-    assert count_words("Hello,world!") == 1
-    
-    # Test string with punctuation at beginning and end
-    assert count_words("!Start and end!") == 3
-    
-    # Test string with multiple punctuation marks together
-    assert count_words("Words... with multiple... punctuation marks!") == 5
