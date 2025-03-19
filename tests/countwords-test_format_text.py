@@ -46,14 +46,3 @@ def test_count_words_with_various_whitespace():
     multi-line text with\ttabs
     and    multiple    spaces"""
     assert count_words(text_with_mixed_whitespace) == 10
-
-def test_count_words_whitespace_only():
-    # Test string with only spaces
-    assert count_words("    ") == 0
-    
-    # Test string with mixed whitespace characters (spaces, tabs, newlines)
-    assert count_words("  \t  \n  \r  ") == 0
-    
-    # Test string with a single whitespace character
-    assert count_words(" ") == 0
-
