@@ -1,0 +1,31 @@
+name: Tusk Test Runner
+
+on:
+  workflow_dispatch:
+    inputs:
+      runId:
+        description: "Tusk Run ID"
+        required: true
+
+jobs:
+  test-action:
+    name: Tusk Test Runner
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Start runner
+        id: test-action
+        uses: UseTusk/test-runner@v1
+        with:
+          runId: ${{ github.event.inputs.runId }}
+          tuskUrl: ${{ secrets.TUSK_URL }}
+          authToken: ${{ secrets.AUTH_TOKEN }}
+          lintScript: black {{ file }}
+          testScript: pytest {{ file }}
