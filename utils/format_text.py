@@ -24,6 +24,3 @@ def count_words(text):
 
 def capitalize_words(text):
     return ' '.join(word.capitalize() for word in text.split())
-
-def remove_extra_spaces(text):
-    return ' '.join(text.split())
