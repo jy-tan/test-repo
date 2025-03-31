@@ -41,5 +41,3 @@ jobs:
           coverageScript: |
             coverage run -m pytest {{testFilePaths}}
             coverage json -o coverage.json
-            # --missing adds lines of code that were not covered by the tests in case this is useful in the future
-            coverage report --missing
