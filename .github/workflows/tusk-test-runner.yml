@@ -36,6 +36,8 @@ jobs:
           tuskUrl: ${{ github.event.inputs.tuskUrl }}
           commitSha: ${{ github.event.inputs.commitSha }}
           authToken: ${{ secrets.AUTH_TOKEN }}
+          testFramework: "pytest"
+          testFileRegex: "^tests/.*(test_.*|.*_test).py$"
           lintScript: black {{ file }}
           testScript: pytest {{ file }}
           coverageScript: |
