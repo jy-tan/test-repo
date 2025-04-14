@@ -38,6 +38,8 @@ jobs:
           authToken: ${{ secrets.AUTH_TOKEN }}
           testFramework: "pytest"
           testFileRegex: "^tests/.*(test_.*|.*_test).py$"
-          lintScript: "black {{ file }}"
-          testScript: "pytest {{ file }}"
-          coverageScript: "pytest --cov=./ --cov-report json:coverage.json {{testFilePaths}}"
+          lintScript: black {{ file }}
+          testScript: pytest {{ file }}
+          coverageScript: |
+            python -m coverage run --source=./ -m pytest {{testFilePaths}}
+            python -m coverage json -o coverage.json
