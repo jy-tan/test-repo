@@ -40,4 +40,4 @@ jobs:
           testFileRegex: "^tests/.*(test_.*|.*_test).py$"
           lintScript: "black {{ file }}"
           testScript: "pytest {{ file }}"
-          coverageScript: "pytest --cov=. --cov-report=json:coverage.json {{testFilePaths}}"
+          coverageScript: "pytest --cov=./ --cov-report json:coverage.json {{testFilePaths}}"
