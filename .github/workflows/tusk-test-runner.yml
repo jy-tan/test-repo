@@ -39,6 +39,7 @@ jobs:
           testFramework: "pytest"
           testFileRegex: "^tests/.*(test_.*|.*_test).py$"
           lintScript: black {{ file }}
+          testScript: pytest {{ file }}
           # coverageScript: |
           #   coverage run -m pytest {{testFilePaths}}
           #   coverage json -o coverage.json
