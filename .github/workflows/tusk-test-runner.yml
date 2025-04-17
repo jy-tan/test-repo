@@ -13,6 +13,9 @@ on:
         description: "Commit SHA to checkout"
         required: true
 
+permissions:
+  pull-requests: write
+
 jobs:
   test-action:
     name: Tusk Test Runner
@@ -27,6 +30,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Collect Workflow Telemetry
+        uses: catchpoint/workflow-telemetry-action@v2
 
       - name: Start runner
         id: test-action
