@@ -36,12 +36,12 @@ jobs:
 
       - name: Start runner
         id: test-action
-        uses: Use-Tusk/test-runner@v1
+        uses: Use-Tusk/test-runner@main
         with:
           runId: ${{ github.event.inputs.runId }}
           tuskUrl: ${{ github.event.inputs.tuskUrl }}
           commitSha: ${{ github.event.inputs.commitSha }}
-          authToken: ${{ secrets.AUTH_TOKEN }}
+          authToken: ${{ secrets.TUSK_AUTH_TOKEN }}
           testFramework: "pytest"
           testFileRegex: "^tests/.*(test_.*|.*_test).py$"
           lintScript: black {{ file }}
