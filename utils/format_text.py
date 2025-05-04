@@ -1,4 +1,7 @@
 import re
+import inflect
+
+p = inflect.engine()
 
 def make_camelcase(text):
     words = text.lower().split()
@@ -18,3 +21,6 @@ def format_date(date):
 
 def format_time(time):
     return time.strftime("%H:%M:%S")
+
+def pluralize_word(word):
+    return p.plural(word)
