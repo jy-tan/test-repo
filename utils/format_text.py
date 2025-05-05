@@ -1,4 +1,7 @@
 import re
+import inflect
+
+p = inflect.engine()
 
 def make_camelcase(text):
     words = text.lower().split()
