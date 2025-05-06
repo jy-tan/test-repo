@@ -39,6 +39,7 @@ def main():
     print("Hello, World 39!")
     print("Hello, World 40!")
     print("Hello, World 41!")
+    print("Hello, World 42!")
 
 if __name__ == "__main__":
     main()
