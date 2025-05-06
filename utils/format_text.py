@@ -22,7 +22,7 @@ def format_date(date):
 def format_time(time):
     return time.strftime("%H:%M:%S")
 
-def conditional_plural(word, count, include_count=False):
+def conditional_plural(word, count, include_count=True):
     """
     Returns the singular or plural form of a word based on the count.
     Optionally includes the count in the output string. Handles basic type checking.
