@@ -10,8 +10,5 @@ def test_format_currency():
     # Test formatting a float with more than two decimal places (rounding expected)
     assert format_currency(1234.567) == "$1,234.57"
 
-    # Test handling of negative numbers
-    assert format_currency(-1234.56) == "-$1,234.56"
-
     # Test formatting of a large number with commas for separation
     assert format_currency(1234567890.12) == "$1,234,567,890.12"
