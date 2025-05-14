@@ -32,3 +32,6 @@ def slugify(text):
     text = re.sub(r'-+', '-', text)
     text = text.strip('-')
     return text
+
+def remove_extra_spaces(text):
+    return re.sub(r'\s+', ' ', text).strip()
