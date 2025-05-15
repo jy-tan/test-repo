@@ -18,3 +18,20 @@ def format_date(date):
 
 def format_time(time):
     return time.strftime("%H:%M:%S")
+
+def count_words(text):
+    return len(text.split())
+
+def capitalize_words(text):
+    return ' '.join(word.capitalize() for word in text.split())
+
+def slugify(text):
+    text = text.lower()
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
+    text = re.sub(r'\s+', '-', text)
+    text = re.sub(r'-+', '-', text)
+    text = text.strip('-')
+    return text
+
+def remove_extra_spaces(text):
+    return re.sub(r'\s+', ' ', text).strip()
