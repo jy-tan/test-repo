@@ -23,7 +23,7 @@ def count_words(text):
     return len(text.split())
 
 def capitalize_words(text):
-    return ' '.join(word.capitalize() for word in text.split())
+    return re.sub(r'\\S+', lambda m: m.group(0).capitalize(), text)
 
 def slugify(text):
     text = text.lower()
