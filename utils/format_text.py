@@ -24,3 +24,11 @@ def count_words(text):
 
 def capitalize_words(text):
     return re.sub(r'\S+', lambda m: m.group(0).capitalize(), text)
+
+def slugify(text):
+    text = text.lower()
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
+    text = re.sub(r'\s+', '-', text)
+    text = re.sub(r'-+', '-', text)
+    text = text.strip('-')
+    return text
