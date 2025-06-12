@@ -36,8 +36,8 @@ def slugify(text):
 def remove_extra_spaces(text):
     return re.sub(r'\s+', ' ', text).strip()
 
-def truncate_text(text, max_length, suffix='... [truncated]'):
-    if len(text) < max_length:
+def truncate_text(text, max_length, suffix='... (truncated)'):
+    if len(text) <= max_length:
         return text
         
     truncated_length = max_length - len(suffix)
