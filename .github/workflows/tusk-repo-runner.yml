@@ -15,7 +15,7 @@ on:
 
 jobs:
   test-action:
-    name: Tusk Test Runner
+    name: Tusk Repo Runner
     runs-on: ubuntu-latest
 
     steps:
