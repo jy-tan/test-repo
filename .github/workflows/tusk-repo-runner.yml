@@ -24,6 +24,6 @@ jobs:
 
       - name: Start runner
         id: repo-runner
-        uses: Use-Tusk/repo-runner@v1
+        uses: Use-Tusk/repo-runner@main
         with:
           tuskUrl: ${{ github.event.inputs.tuskUrl }}
