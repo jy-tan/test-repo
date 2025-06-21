@@ -6,9 +6,6 @@ on:
       tuskUrl:
         description: "Tusk server URL"
         required: true
-      runId:
-        description: "Tusk run ID"
-        required: true
       commitSha:
         description: "Commit SHA to checkout"
         required: true
@@ -30,4 +27,3 @@ jobs:
         uses: Use-Tusk/repo-runner@main
         with:
           tuskUrl: ${{ github.event.inputs.tuskUrl }}
-          runId: ${{ github.event.inputs.runId }}
