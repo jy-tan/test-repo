@@ -1,0 +1,29 @@
+name: Tusk Repo Runner
+
+on:
+  workflow_dispatch:
+    inputs:
+      tuskUrl:
+        description: "Tusk server URL"
+        required: true
+      commitSha:
+        description: "Commit SHA to checkout"
+        required: true
+
+jobs:
+  test-action:
+    name: Tusk Repo Runner
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.commitSha }}
+
+      - name: Start runner
+        id: repo-runner
+        uses: Use-Tusk/repo-runner@main
+        with:
+          tuskUrl: ${{ github.event.inputs.tuskUrl }}
