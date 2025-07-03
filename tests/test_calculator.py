@@ -1,4 +1,3 @@
-import pytest
 from utils.calculator import add, multiply, divide, sqrt
 
 def test_add():
