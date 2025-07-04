@@ -24,3 +24,6 @@ def count_words(text, sep=" "):
 
 def capitalize_words(text):
     return re.sub(r'\S+', lambda m: m.group(0).capitalize(), text)
+
+def make_snake_case(text):
+    return re.sub(r'\s+', '_', text).lower()
