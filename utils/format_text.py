@@ -27,3 +27,6 @@ def capitalize_words(text):
 
 def make_snake_case(text):
     return re.sub(r'\s+', '_', text).lower()
+
+def make_kebab_case(text):
+    return re.sub(r'\s+', '-', text).lower()
