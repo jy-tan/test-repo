@@ -18,3 +18,15 @@ def format_date(date):
 
 def format_time(time):
     return time.strftime("%H:%M:%S")
+
+def count_words(text, sep=" "):
+    return len(text.split(sep))
+
+def capitalize_words(text):
+    return re.sub(r'\S+', lambda m: m.group(0).capitalize(), text)
+
+def make_snake_case(text):
+    return re.sub(r'\s+', '_', text).lower()
+
+def make_kebab_case(text):
+    return re.sub(r'\s+', '-', text).lower()
