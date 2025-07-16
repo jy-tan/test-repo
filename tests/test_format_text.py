@@ -1,5 +1,3 @@
-from utils.format_text import format_currency, make_camelcase
-
 def test_format_currency():
     # Test formatting an integer
     assert format_currency(1234) == "$1,234.00"
