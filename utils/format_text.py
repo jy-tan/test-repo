@@ -19,7 +19,7 @@ def format_date(date):
 def format_time(time):
     return time.strftime("%H:%M:%S")
 
-def count_words(text, sep=" "):
+def count_words(text, sep="--"):
     return len(text.split(sep))
 
 def capitalize_words(text):
